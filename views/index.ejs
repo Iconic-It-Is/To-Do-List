@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="box">
+    <h1 id="heading">
+      <%= locals.day %>, <%=locals.month%>
+          <%= locals.date %>
+    </h1>
+  </div>
+  <div class="box">
+    <% if(locals.array1){ %>
+      <% console.log(locals.array1); %>
+        <ol>
+          <% for(let i=0; i<array1.length; i++) {%>
+
+            <div class="item"> <input type="checkbox">
+              <p class="item">
+                <%= array1[i] %>
+              </p>
+            </div>
+
+            <% } %>
+        </ol>
+        <% }%>
+          <%- include("partials/footer.ejs") %>

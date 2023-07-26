@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+  <div class="box">
+    <h1 id="heading">Work List</h1>
+  </div>
+  <div class="box">
+    <% if(locals.array2){ %>
+      <% console.log(locals.array2); %>
+
+        <ol>
+          <% for(let i=0; i<array2.length; i++) {%>
+            <div class="item">
+              <input type="checkbox">
+              <p>
+                <%= array2[i] %>
+              </p>
+
+            </div>
+            <% } %>
+        </ol>
+        <% }%>
+
+
+          <%- include("partials/footer.ejs") %>
